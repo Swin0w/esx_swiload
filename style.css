@@ -1,0 +1,89 @@
+@font-face {
+    font-family: stranger;
+    src: url(fonts/strangerThings.woff);
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+.intro {
+    overflow: hidden;
+    height: 100vh;
+    position: relative;
+    display: flex;
+}
+#myvideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    z-index: -1;
+}
+#text-in {
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+h1 {
+    font-family: stranger;
+    font-size: 18pt;
+    color: white ;
+    text-shadow: 2px 2px #000;
+}
+#info {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    z-index: 2;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 30px;
+}
+#info p {   
+    color: rgb(255, 176, 29);
+    font-size: 22pt;
+}
+#container {
+    width: 150px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+}
+#pp {
+    color: black;
+    margin: 0 20px;
+    width: 45px;
+    height: 45px;
+    background-color: wheat;
+    border-radius: 50px;
+    text-align: center;
+}
+#green {
+    background-color: wheat;
+    width: 20px;
+    padding-left: 10px;
+    margin-right: -22px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+#red {
+    background-color: wheat;
+    width: 25px;
+    padding-left: 10px;
+    margin-left: -22px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.fa-pause, .fa-play {
+    color: #000;
+    line-height: 45px;
+    vertical-align: middle;
+    font-weight: bold;
+}
+.toggle {
+    color: green;
+}

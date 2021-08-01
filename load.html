@@ -1,0 +1,97 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<div class="intro">
+    <div id="text-in">
+        <h1 id="first-text"></h1>
+    </div>
+    <video id="myvideo" autoplay>
+        <source src="nrloading.mp4" type="video/mp4">
+    </video>
+    <audio loop hidden autoplay>
+        <source src="multimedia/nrload.mp3" type="audio/mpeg">
+    </audio>
+    <div id="info">
+        <!--<p>Premi spazio per mettere la musica in-->
+        <div id="container">
+            <div id="green"><i class="fas fa-volume-down"></i></div>
+            <div id="pp"><i class="fas fa-pause"></i></div>
+            <div id="red"><i class="fas fa-volume-up"></i></div>
+        </div>
+            <!--</p>-->
+    </div>
+</div>
+<script>
+    // Selezione dell'ELEMENTO AUDIO HTML
+    var video = document.querySelector('video');
+    var audio = document.querySelector('audio');
+    // Se audio attivo allora
+    if (audio) {
+        setTimeout(function() {
+            document.getElementById('first-text').innerHTML = 'PREMI SPAZIO PER METTERE IN PAUSA E VICEVERSA<br> E PREMI + o - DAL TASTIERINO NUMERICO<br>PER AUMENTARE E DIMINUIRE IL VOLUME';
+            setTimeout(function() {
+                document.getElementById('first-text').innerHTML = 'THEONLYGABRY';
+                setTimeout(function() {
+                    document.getElementById('first-text').innerHTML = 'MAXTEO';
+                    setTimeout(function() {
+                        document.getElementById('first-text').innerHTML = 'FILOCESTE';
+                        setTimeout(function() {
+                            document.getElementById('first-text').innerHTML = 'FREDDO913';
+                            setTimeout(function() {
+                                document.getElementById('first-text').innerHTML = 'SWINOW';
+                                setTimeout(function() {
+                                    document.getElementById('first-text').innerHTML = 'COBRA_I30N';
+                                    setTimeout(function() {
+                                        document.getElementById('first-text').innerHTML = 'JACOTV';
+                                        setTimeout(function() {
+                                            document.getElementById('first-text').innerHTML = 'MAST3R';
+                                            setTimeout(function() {
+                                                document.getElementById('first-text').innerHTML = '';
+                                                setTimeout(function() {
+                                                    document.getElementById('first-text').innerHTML = 'BUON GAME!';
+                                                }, 16000)
+                                            }, 5000)
+                                        }, 4000)
+                                    }, 4000)
+                                }, 4000)
+                            }, 4000)
+                        }, 4000)
+                    }, 5000)
+                }, 6000)
+            }, 4000)
+        }, 0)
+        audio.volume = 0.2;
+        // All'evento di pressione
+        window.addEventListener('keydown', function (event) {
+        // ...
+        var key = event.which || event.keyCode;
+        // Se il tasto premuto equivale al keyCode 32 -> Barra spaziatrice
+         if (key === 32) { 
+            event.preventDefault();
+            // audio e video viene messo in pausa o in stato di ascolto
+            video.paused ? video.play() : video.pause();
+            audio.paused ? audio.play() : audio.pause(); 
+            // Cambio della scritta in base alla alla pressione, Se premuto una volta mette in ascolto altrimenti in pausa
+            if(audio.paused) {
+                console.log("ciao");
+                document.getElementById('pp').innerHTML = document.getElementById('pp').innerHTML.replace('<i class="fas fa-pause"></i>', '<i class="fas fa-play"></i>');
+            } else {
+                document.getElementById('pp').innerHTML = document.getElementById('pp').innerHTML.replace('<i class="fas fa-play"></i>', '<i class="fas fa-pause"></i>');
+            }
+        }
+        if (key == 107) {
+            audio.volume = audio.volume + 0.1;
+            console.log(audio.volume);
+        } else if (key == 109) {
+            audio.volume = audio.volume - 0.1;
+            console.log(audio.volume);
+        }
+        });
+    }
+</script>
+<!--Loading realizzata da Swinow. per quanto riguarda il mondo di FiveM-->
